@@ -12,6 +12,9 @@ handlers:
   script: /bin/recv_email.php
   login: admin
 
+- url: /$
+  script: index.php
+
 - url: /(.+\.php)$
   script: \1
 
