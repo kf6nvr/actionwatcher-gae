@@ -1,0 +1,17 @@
+application: actionwatcher
+version: 1
+runtime: php
+api_version: 1
+inbound_services:
+- mail
+
+handlers:
+# Serve php scripts.
+
+- url: /_ah/mail/.+
+  script: /bin/recv_email.php
+  login: admin
+
+- url: /(.+\.php)$
+  script: \1
+
