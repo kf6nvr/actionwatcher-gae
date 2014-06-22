@@ -1,0 +1,4 @@
+cron:
+- description: check for time since last 
+  url: /bin/check_activity.php
+  schedule: every 1 hours
